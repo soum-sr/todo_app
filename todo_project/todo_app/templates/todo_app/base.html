@@ -13,80 +13,9 @@
         <ul>
           <li>ToDo</li>
         </ul>
-    </nav>
-
-<!-- partial:index.partial.html -->
-<section class="insert_data">
-  <!-- DUE DATE,  -->
-</section>
-<section class="timeline">
-      <ul>
-        <li>
-          <div>
-            <time>1687</time>
-            <div class="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Laws of motion
-              </p>
-            </div>
-            <div class="scientist">
-              <h1>Scientist</h1>
-              <span>Newton</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>1785</time>
-            <div class="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Law of electrostatic attraction
-              </p>
-            </div>
-            <div class="scientist">
-              <h1>Scientist</h1>
-              <span>Coulomb</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>1827</time>
-            <div class="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Law of Electric Resistance
-              </p>
-            </div>
-            <div class="scientist">
-              <h1>Scientist</h1>
-              <span>G.S Ohm</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>1831</time>
-            <div class="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Electromagnetic Induction
-              </p>
-            </div>
-            <div class="scientist">
-              <h1>Scientist</h1>
-              <span>Michael Faraday</span>
-            </div>
-          </div>
-        </li>
-        
-        
-      </ul>
-    </section>
-<!-- partial -->
-  <script  src="{% static 'todo_app/script.js' %}"></script>
+</nav>
+{% block content %}
+{% endblock content %}
 
 </body>
 </html>
