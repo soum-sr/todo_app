@@ -28,9 +28,13 @@
                {{task.created|date:'d-m-Y'}} 
               </time>
               <div class="discovery">
-                <p>
-                  {{task.title}}
-                </p>
+                
+                  {% if task.complete == True %}
+                  <p><strike>{{task.title}}</strike></p>
+                  {% else %}
+                  <p>{{task.title}}</p>
+                  {% endif %}
+                
               </div>
               <div class="scientist {{ task.priority }}">
                 {{ task.priority }}
