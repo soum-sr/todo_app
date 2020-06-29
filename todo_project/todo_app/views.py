@@ -35,5 +35,10 @@ def updateTask(request, pk):
 
 def deleteTask(request, pk):
     item = Task.objects.get(id=pk)
+
+    if request.method == 'POST':
+        item.delete()
+        return redirect('/')
+
     context = {'item':item}
     return render(request, 'todo_app/delete.html', context)

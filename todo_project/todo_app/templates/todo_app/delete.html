@@ -4,4 +4,8 @@
 {% block content %}
 <p>Are you sure you wanna delete "{{item}}"?</p>
 <a href="{% url 'todo-home' %}">Cancel</a>
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="submit" name="Confirm">
+</form>
 {% endblock content %}
