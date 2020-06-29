@@ -11,10 +11,12 @@
     </ul>
 </div> -->
 
+<nav class="create-nav">
+  <ul class="create-ul">
+    <li class="create-task"><a href="{% url 'create' %}">Add a Task</a></li>
+  </ul>
+</nav>
 
-<div class="create-task">
-  <a href="{% url 'create' %}">Create a Task</a>
-</div>
   <section class="timeline">
         <ul>
           {% for task in tasks%}

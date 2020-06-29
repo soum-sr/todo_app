@@ -46,6 +46,19 @@ nav ul li {
   
 }
 
+.create-task a{
+  text-decoration: none; 
+  color: white;
+}
+.create-task{
+  padding: 0px 5px;
+}
+.create-nav:hover{
+  background:rgb(53, 243, 78);
+  font-weight: bolder;
+  transition: 0.4s;
+}
+
 .timeline ul li {
   list-style-type: none;
   position: relative;
