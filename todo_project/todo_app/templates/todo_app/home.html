@@ -3,77 +3,33 @@
 {%block content %}
 
 <!-- partial:index.partial.html -->
-<div class="sorting">
+<!-- <div class="sorting">
     <ul>
         <li>Sort by Date Added</li>
         <li>Sort by Due Date</li>
         <li>Sort by Priority</li>
     </ul>
-</div>
+</div> -->
   <section class="timeline">
         <ul>
-
+          {% for task in tasks%}
           <li>
             <div>
-              <time>15th June 2020</time>
+              <time>
+               {{task.created|date:'d-m-Y'}} 
+              </time>
               <div class="discovery">
-                <h1>Discovery</h1>
                 <p>
-                  Laws of motion
+                  {{task.title}}
                 </p>
               </div>
               <div class="scientist">
-                <button>Edit</button>
-                <button>Complete</button>
+                <!-- PRIORITY HERE -->
               </div>
             </div>
           </li>
-
-          <li>
-            <div>
-              <time>1785</time>
-              <div class="discovery">
-                <h1>Discovery</h1>
-                <p>
-                  Law of electrostatic attraction
-                </p>
-              </div>
-              <div class="scientist">
-                <h1>Scientist</h1>
-                <span>Coulomb</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>1827</time>
-              <div class="discovery">
-                <h1>Discovery</h1>
-                <p>
-                  Law of Electric Resistance
-                </p>
-              </div>
-              <div class="scientist">
-                <h1>Scientist</h1>
-                <span>G.S Ohm</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>1831</time>
-              <div class="discovery">
-                <h1>Discovery</h1>
-                <p>
-                  Electromagnetic Induction
-                </p>
-              </div>
-              <div class="scientist">
-                <h1>Scientist</h1>
-                <span>Michael Faraday</span>
-              </div>
-            </div>
-          </li>
+          {% endfor %}
+          
           
           
         </ul>

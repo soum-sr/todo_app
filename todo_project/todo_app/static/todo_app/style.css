@@ -95,18 +95,22 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
-.timeline ul li div div p {
-  text-align: center;
-}
+
 .timeline ul li div .discovery {
-  margin-right: 20px;
-  padding-right:80px;
+  margin-right: 1px;
+  /* padding-right:80px; */
+  font-size: 20px;
+  font-family: monospace;
+  
 }
 
 .timeline ul li div .scientist {
   text-align: center;
-  right:4%;
+  right:1%;
+  left:3%;
+  width: 65px;
   background-color: rgb(103, 223, 109);
 }
 .timeline ul li:nth-of-type(odd) > div {
