@@ -10,6 +10,15 @@
         <li>Sort by Priority</li>
     </ul>
 </div> -->
+
+<div class="form-stuffs">
+  <form method="POST" action="/">
+    {% csrf_token %}
+    {{form.title}}
+    {{form.priority}}
+    <input type="submit" name="Create Task">
+  </form>
+</div>
   <section class="timeline">
         <ul>
           {% for task in tasks%}
@@ -23,8 +32,8 @@
                   {{task.title}}
                 </p>
               </div>
-              <div class="scientist">
-                <!-- PRIORITY HERE -->
+              <div class="scientist {{ task.priority }}">
+                {{ task.priority }}
               </div>
             </div>
           </li>
