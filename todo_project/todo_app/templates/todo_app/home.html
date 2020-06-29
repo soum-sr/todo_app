@@ -38,6 +38,9 @@
               <div class="update-task">
                 <a href="{% url 'update' task.id %}">Update</a>
               </div>
+              <div class="delete-task">
+                <a href="{% url 'delete' task.id %}">Delete</a>
+              </div>
             </div>
           </li>
           {% endfor %}

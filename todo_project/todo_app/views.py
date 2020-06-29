@@ -19,4 +19,21 @@ def home(request):
 
 def updateTask(request, pk):
     task = Task.objects.get(id=pk)
-    return render(request, 'todo_app/update_task.html')
+
+    # Prefill the form with instance
+    form = TaskForm(instance=task)
+    context = {'form':form}
+
+    if request.method == 'POST':
+        form = TaskForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+
+
+    return render(request, 'todo_app/update_task.html',context)
+
+def deleteTask(request, pk):
+    item = Task.objects.get(id=pk)
+    context = {'item':item}
+    return render(request, 'todo_app/delete.html', context)

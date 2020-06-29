@@ -1,0 +1,7 @@
+{% extends 'todo_app/base.html'%}
+
+
+{% block content %}
+<p>Are you sure you wanna delete "{{item}}"?</p>
+<a href="{% url 'todo-home' %}">Cancel</a>
+{% endblock content %}

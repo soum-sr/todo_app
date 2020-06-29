@@ -166,6 +166,27 @@ nav ul li {
   color:white;
 }
 
+.timeline ul li div .delete-task {
+  position: absolute;
+  background: #bd0c0c;
+  width: 120px;
+  height: 20px;
+  right:120px;
+  top: 125px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.timeline ul li div .delete-task:hover{
+  background: #ff0101;
+  width: 123px;
+}
+.timeline ul li div .delete-task a{
+  text-decoration: none;
+  color:white;
+}
 
 @media screen and (max-width: 900px) {
   .timeline ul li div {
