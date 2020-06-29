@@ -16,3 +16,7 @@ def home(request):
         
     context = {'tasks':tasks,'form':form}
     return render(request, 'todo_app/home.html', context)
+
+def updateTask(request, pk):
+    task = Task.objects.get(id=pk)
+    return render(request, 'todo_app/update_task.html')

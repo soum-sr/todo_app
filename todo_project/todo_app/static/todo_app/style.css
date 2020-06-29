@@ -145,6 +145,28 @@ nav ul li {
   opacity: 1;
 }
 
+.timeline ul li div .update-task {
+  position: absolute;
+  background: #0c52bd;
+  width: 120px;
+  height: 20px;
+  top: 125px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.timeline ul li div .update-task:hover{
+  background: #247cff;
+  width: 123px;
+}
+.timeline ul li div .update-task a{
+  text-decoration: none;
+  color:white;
+}
+
+
 @media screen and (max-width: 900px) {
   .timeline ul li div {
     width: 250px;
