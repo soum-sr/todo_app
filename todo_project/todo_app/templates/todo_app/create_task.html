@@ -1,0 +1,13 @@
+{% extends 'todo_app/base.html'%}
+
+
+{% block content %}
+<div class="form-stuffs">
+    <form method="POST" action="">
+      {% csrf_token %}
+      {{form.title}}
+      {{form.priority}}
+      <input type="submit" name="Create Task">
+    </form>
+  </div>
+{% endblock content %}

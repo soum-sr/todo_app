@@ -6,16 +6,24 @@ from .forms import TaskForm
 
 def home(request):
     tasks = Task.objects.all()
-    form = TaskForm()
 
-    if request.method == 'POST':
-        form  = TaskForm(request.POST)
+    context = {'tasks':tasks}
+    return render(request, 'todo_app/home.html', context)
+
+def createTask(request):
+    form = TaskForm()
+    if request.method=='POST':
+        form = TaskForm(request.POST)
         if form.is_valid():
+            print("Form valid ")
             form.save()
         return redirect('/')
-        
-    context = {'tasks':tasks,'form':form}
-    return render(request, 'todo_app/home.html', context)
+
+    context = {'form':form}
+    return render(request, 'todo_app/create_task.html', context)
+    
+
+
 
 def updateTask(request, pk):
     task = Task.objects.get(id=pk)

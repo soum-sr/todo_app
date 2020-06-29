@@ -11,13 +11,9 @@
     </ul>
 </div> -->
 
-<div class="form-stuffs">
-  <form method="POST" action="/">
-    {% csrf_token %}
-    {{form.title}}
-    {{form.priority}}
-    <input type="submit" name="Create Task">
-  </form>
+
+<div class="create-task">
+  <a href="{% url 'create' %}">Create a Task</a>
 </div>
   <section class="timeline">
         <ul>
