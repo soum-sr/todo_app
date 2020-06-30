@@ -1,13 +1,21 @@
 {% extends 'todo_app/base.html'%}
-
+{% load crispy_forms_tags %}
 
 {% block content %}
-<div class="updateHeading">
-    <h1>Update Title</h1>
+<div class="container">
+
+    <form method="POST">
+        <!-- for security purposes django forms require csrf_tokens -->
+        {% csrf_token %}
+        <fieldset class="form-group" style="color:white;">
+            
+            {{ form | crispy }}
+    
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Update</button>
+        </div>
+    </form>
 </div>
-<form method="POST" action="">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" name="Update Task"> 
-</form>
 {% endblock content %}
+

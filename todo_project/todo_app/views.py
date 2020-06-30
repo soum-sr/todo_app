@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
+from django.contrib import messages
 # Create your views here.
 
 
@@ -17,6 +18,7 @@ def createTask(request):
         if form.is_valid():
             print("Form valid ")
             form.save()
+            messages.success(request, 'Task Added')
         return redirect('/')
 
     context = {'form':form}

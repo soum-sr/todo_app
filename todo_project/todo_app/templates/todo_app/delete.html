@@ -2,10 +2,15 @@
 
 
 {% block content %}
-<p>Are you sure you wanna delete "{{item}}"?</p>
-<a href="{% url 'todo-home' %}">Cancel</a>
+<div class="container delete-page" style="text-align:center;">
+    <p class="delete-p">Are you sure you wanna delete "{{item}}"?</p>
+    <br>
+<a class="btn btn-outline-info no" style="float:left; margin-left:400px;" href="{% url 'todo-home' %}">NO</a>
 <form method="POST" action="">
     {% csrf_token %}
-    <input type="submit" name="Confirm">
+    <div class="form-group" style="float:right; margin-right:400px;">
+        <button class="btn btn-outline-danger yes" type="submit">YES</button>
+    </div>
 </form>
+</div>
 {% endblock content %}
