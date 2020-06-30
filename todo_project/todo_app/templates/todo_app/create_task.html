@@ -1,13 +1,18 @@
 {% extends 'todo_app/base.html'%}
+{% load crispy_forms_tags %}
 
 
 {% block content %}
 <div class="form-stuffs">
     <form method="POST" action="">
       {% csrf_token %}
-      {{form.title}}
+      <h1>Task Title</h1>
+      {{form.title }}
+      <br>
+      <h1>Priority</h1>
       {{form.priority}}
-      <input type="submit" name="Create Task" value="Create Task">
+      <br>
+      <input type="submit" name="Create Task" class="btn btn-success create-button" value="Create Task">
     </form>
   </div>
 {% endblock content %}

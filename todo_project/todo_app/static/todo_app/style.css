@@ -217,7 +217,7 @@ nav ul li {
 }
 @media screen and (max-width: 600px) {
   body {
-    background: #8bfff4;
+    background: rgb(29, 29, 29);
   }
 
   .timeline ul li {
@@ -254,4 +254,26 @@ nav ul li {
 .yes{
   padding:10px 28px;
   font-size: 21px;
+}
+
+input{
+  border-radius: 15px;
+  border:none;
+  width:400px;
+  height:35px;
+  padding:5px 25px;
+}
+.create-button{
+  width: 130px;
+  height:40px;
+  margin-top:25px;
+}
+.form-stuffs{
+  text-align: center;
+  margin-top:35px;
+}
+.form-stuffs h1{
+  color:#fff;
+  font-size:22px;
+  margin-top:15px;
 }
