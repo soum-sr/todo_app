@@ -5,10 +5,10 @@
 <div class="container delete-page" style="text-align:center;">
     <p class="delete-p">Are you sure you wanna delete "{{item}}"?</p>
     <br>
-<a class="btn btn-outline-info no" style="float:left; margin-left:400px;" href="{% url 'todo-home' %}">NO</a>
+<a class="btn btn-outline-info no" href="{% url 'todo-home' %}">NO</a>
 <form method="POST" action="">
     {% csrf_token %}
-    <div class="form-group" style="float:right; margin-right:400px;">
+    <div class="form-group">
         <button class="btn btn-outline-danger yes" type="submit">YES</button>
     </div>
 </form>
