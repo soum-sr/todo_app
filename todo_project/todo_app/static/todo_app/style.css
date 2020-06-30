@@ -202,34 +202,6 @@ nav ul li {
   color:white;
 }
 
-@media screen and (max-width: 900px) {
-  .timeline ul li div {
-    width: 250px;
-    flex-direction: column;
-  }
-  .timeline ul li div div {
-    width: 80%;
-    margin: 10px;
-  }
-  .timeline ul li:nth-of-type(even) > div {
-    left: -289px;
-  }
-}
-@media screen and (max-width: 600px) {
-  body {
-    background: rgb(29, 29, 29);
-  }
-
-  .timeline ul li {
-    margin-left: 20px;
-  }
-  .timeline ul li div {
-    width: calc(100vw - 91px);
-  }
-  .timeline ul li:nth-of-type(even) > div {
-    left: 45px;
-  }
-}
 
 
 /* Update task page */
@@ -259,7 +231,7 @@ nav ul li {
 input{
   border-radius: 15px;
   border:none;
-  width:400px;
+  width:30rem;
   height:35px;
   padding:5px 25px;
 }
@@ -276,4 +248,48 @@ input{
   color:#fff;
   font-size:22px;
   margin-top:15px;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+    flex-direction: column;
+  }
+  .timeline ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: -289px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background: rgb(29, 29, 29);
+  }
+
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+    height:250px;
+    margin-bottom:30px;
+
+  }
+  .timeline ul li div .scientist{
+    height:35px;
+    width:90px;
+  }
+  .timeline ul li div .delete-task{
+    top:230px;
+    left:8.5rem;
+  }
+  .timeline ul li div .update-task{
+    top:230px;
+    right:8.5rem;
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
 }
